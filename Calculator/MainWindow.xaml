@@ -1,0 +1,44 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="520" Width="465">
+    <Grid Margin="0,0,0,24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="516*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="430*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="answerDisplay" TextWrapping="Wrap" TextAlignment="Right" FlowDirection="LeftToRight" FontWeight="Bold" HorizontalAlignment="Left" Width="415" Height="80" VerticalAlignment="Top" AcceptsReturn="True" FontSize="48" IsUndoEnabled="False" FontStretch="Medium" Margin="5,10,0,0" Grid.Column="3" Grid.RowSpan="2"/>
+        <Button x:Name="btnClear" Content="C" HorizontalAlignment="Left" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" Background="#FFF7FFAC" BorderBrush="{x:Null}" Margin="5,101,0,0" Grid.Column="3" Grid.Row="1" FontSize="20" Click="btnClear_Click"/>
+        <Button x:Name="btnErase" Content="CE" HorizontalAlignment="Left" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" BorderBrush="#FFF7FFAC" Background="#FFF7FFAC" Margin="113,101,0,0" Grid.Column="3" Grid.Row="1" FontSize="20"/>
+        <Button x:Name="btnModulas" Content="%" HorizontalAlignment="Left" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF7FFAC" Margin="221,101,0,0" Grid.Column="3" Grid.Row="1" FontSize="20" Click="btnModulas_Click"/>
+        <Button x:Name="btnDivide" Content="/" HorizontalAlignment="Left" Margin="329,101,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" Background="#FFF7FFAC" BorderBrush="{x:Null}" Grid.Column="3" Grid.Row="1" FontSize="20" Click="btnDivide_Click"/>
+        <Button x:Name="btnOne" Content="1" HorizontalAlignment="Left" Margin="5,172,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" Background="#FFF7FFAC" BorderBrush="{x:Null}" Click="btnOne_Click" Grid.Column="3" Grid.Row="1" FontSize="20"/>
+        <Button x:Name="btnTwo" Content="2" HorizontalAlignment="Left" Margin="113,172,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" Background="#FFF7FFAC" BorderBrush="{x:Null}" Click="btnTwo_Click" Grid.Column="3" Grid.Row="1" FontSize="20"/>
+        <Button x:Name="btnThree" Content="3" HorizontalAlignment="Left" Margin="221,172,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" Background="#FFF7FFAC" BorderBrush="{x:Null}" Click="btnThree_Click" Grid.Column="3" Grid.Row="1" FontSize="20"/>
+        <Button x:Name="btnMultiplier" Content="*" HorizontalAlignment="Left" Margin="329,172,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" Background="#FFF7FFAC" BorderBrush="{x:Null}" Grid.Column="3" Grid.Row="1" FontSize="20" Click="btnMultiplier_Click"/>
+        <Button x:Name="btnFour" Content="4" HorizontalAlignment="Left" Margin="5,241,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" Background="#FFF7FFAC" BorderBrush="{x:Null}" Click="btnFour_Click_1" Grid.Column="3" Grid.Row="1" FontSize="20"/>
+        <Button x:Name="btnFive" Content="5" HorizontalAlignment="Left" Margin="113,241,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" Background="#FFF7FFAC" BorderBrush="{x:Null}" Click="btnFive_Click" Grid.Column="3" Grid.Row="1" FontSize="20"/>
+        <Button x:Name="btnSix" Content="6" HorizontalAlignment="Left" Margin="221,241,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF7FFAC" Click="btnSix_Click" Grid.Column="3" Grid.Row="1" FontSize="20"/>
+        <Button x:Name="btnSubtraction" Content="-" HorizontalAlignment="Left" Margin="329,241,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" Background="#FFF7FFAC" BorderBrush="{x:Null}" Grid.Column="3" Grid.Row="1" FontSize="20" Click="btnSubtraction_Click"/>
+        <Button x:Name="btnSeven" Content="7" HorizontalAlignment="Left" Margin="5,312,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" BorderBrush="#FFF7FFAC" Background="#FFF7FFAC" Click="Button_Click_2" Grid.Column="3" Grid.Row="1" FontSize="20"/>
+        <Button x:Name="btnEight" Content="8" HorizontalAlignment="Left" Margin="113,312,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" BorderBrush="#FFF7FFAC" Background="#FFF7FFAC" Click="btnEight_Click" Grid.Column="3" Grid.Row="1" FontSize="20"/>
+        <Button x:Name="btnNine" Content="9" HorizontalAlignment="Left" Margin="221,312,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" BorderBrush="#FFF7FFAC" Background="#FFF7FFAC" Click="btnNine_Click" Grid.Column="3" Grid.Row="1" FontSize="20"/>
+        <Button x:Name="btnAddition" Content="+" HorizontalAlignment="Left" Margin="329,312,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" Background="#FFF7FFAC" BorderBrush="{x:Null}" Grid.Column="3" Grid.Row="1" Click="btnAddition_Click" FontSize="20"/>
+        <Button x:Name="btnInvers" Content="+/-" HorizontalAlignment="Left" Margin="5,382,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" BorderBrush="#FFF7FFAC" Background="#FFF7FFAC" Grid.Column="3" Grid.Row="1" FontSize="20" Click="btnInvers_Click"/>
+        <Button x:Name="btnZero" Content="0" HorizontalAlignment="Left" Margin="113,382,0,0" VerticalAlignment="Top" Height="56" Width="91" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" BorderBrush="#FFF7FFAC" Background="#FFF7FFAC" Click="btnZero_Click" Grid.Column="3" Grid.Row="1"  FontSize="20"/>
+        <Button x:Name="btnAnswer" Content="=" HorizontalAlignment="Left" Margin="222,382,0,0" VerticalAlignment="Top" Height="56" Width="198" RenderTransformOrigin="0.202,0.154" FontWeight="Bold" Background="#FFF7FFAC" BorderBrush="{x:Null}" Grid.Column="3" Grid.Row="1" FontSize="20" Click="btnAnswer_Click"/>
+
+    </Grid>
+
+</Window>
